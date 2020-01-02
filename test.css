@@ -1,0 +1,140 @@
+body{
+	font-family: 'Lucida Console', Monaco, monospace;
+	margin:0px;
+	padding: 0px;
+}
+
+nav{
+	width: 100;
+	background-color: #154360; /*couleur bandeau*/
+}
+
+nav > ul{
+	margin:0px;
+	padding: 0px; /*taille du bandeau*/
+	display: block;
+}
+
+nav > ul::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+nav > ul >li{
+	float: left;
+	position: relative;
+	/*left: 27%;*/
+}
+
+nav > ul > li > a{
+	padding: 20px 30px;
+	color: #FFF;
+}
+
+nav > ul > li:hover a{
+	padding: 15px 30px 20px 30px
+}
+
+nav li{
+	list-style-type: none;
+}
+
+.sous-menu{
+	display: none;
+}
+
+nav input[type=checkbox]{
+	display: none;
+}
+
+nav label{
+	display: none;
+}
+
+nav a{
+	margin: 0px; /*agrandit le tous*/
+	display: inline-block;
+	text-decoration: none;
+}
+
+nav li:hover .sous-menu{
+	display:inline-block;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	padding:0px;
+	z-index:1000; 
+}
+
+.sous-menu li{
+	border-bottom: 1px solid #CCC /*bande blanche onglets: à changer*/;
+}
+
+
+.sous-menu li a{
+	border-bottom: 15px 30px;
+	font-size: 13px;
+	color: #222538;
+	width: 200px;
+}
+
+.onglet:hover{
+	border-top: 5px solid #e44d26;
+	background-color: RGBa(228, 77, 38, 0.15); /*couleur de fond en semi-transparance*/
+}
+
+.onglet .sous-menu{
+	background-color: RGB(230,100,40);
+}
+
+.sous-menu li:hover a{ /*surligne en gras quand on passe sous les sous onglet*/
+	color: #EEE;
+	font-weight: bold;
+}
+
+.onglet .sous-menu li:hover{
+	background-color: RGB(210, 77, 60);
+}
+
+nav input[type=checkbox]:checked ~ ul{
+	display: block;
+}
+
+@media screen and (max-width: 780px){
+	.menu-mobile{
+		display: block;
+		color: #FFF;
+		background-color: RGBa(29, 197, 151, 0.97); /*bleu-vert à changer*/
+		text-align: center;
+		padding: 12px 0px;
+	}
+
+	nav ul{
+		display: none;
+	}
+
+	nav ul li, nav ul li a{
+		width: 100%;
+		text-align: center;
+	}
+
+	nav ul li a, nav ul li:hover a{
+		padding: 10px 0px;
+	}
+
+	/*.onglet:hover{
+		border-top: 5px solid #e44d26;
+	}*/
+
+
+	.sous-menu li{
+	border-bottom: 1px solid #154360 /*bande blanche onglets: à changer*/;
+	}
+
+
+	nav li:hover .sous-menu{
+		display: block;
+		position: static;
+	}
+}
