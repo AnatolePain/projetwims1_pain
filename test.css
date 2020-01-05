@@ -1,9 +1,19 @@
+html{
+	height: 100%;
+}
+
+
 body{
 	font-family: 'Lucida Console', Monaco, monospace;
 	margin:0px;
 	padding: 0px;
+
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
+/*----------------BAR DE NAVIGATION-----------*/
 nav{
 	width: 100;
 	background-color: #154360; /*couleur bandeau*/
@@ -24,7 +34,7 @@ nav > ul::after{
 nav > ul >li{
 	float: left;
 	position: relative;
-	/*left: 27%;*/
+	left: 27%;
 }
 
 nav > ul > li > a{
@@ -74,18 +84,18 @@ nav li:hover .sous-menu{
 
 .sous-menu li a{
 	border-bottom: 15px 30px;
-	font-size: 13px;
+	font-size: 14px;
 	color: #222538;
 	width: 200px;
 }
 
 .onglet:hover{
-	border-top: 5px solid #e44d26;
-	background-color: RGBa(228, 77, 38, 0.15); /*couleur de fond en semi-transparance*/
+	border-top: 5px solid #0070bb; 
+	background-color: RGBa(000, 112, 192, 0.15); /*couleur de fond en semi-transparance*/
 }
 
 .onglet .sous-menu{
-	background-color: RGB(230,100,40);
+	background-color: RGB(000,160,240);
 }
 
 .sous-menu li:hover a{ /*surligne en gras quand on passe sous les sous onglet*/
@@ -94,7 +104,7 @@ nav li:hover .sous-menu{
 }
 
 .onglet .sous-menu li:hover{
-	background-color: RGB(210, 77, 60);
+	background-color: RGB(000, 115, 200);
 }
 
 nav input[type=checkbox]:checked ~ ul{
@@ -105,9 +115,12 @@ nav input[type=checkbox]:checked ~ ul{
 	.menu-mobile{
 		display: block;
 		color: #FFF;
-		background-color: RGBa(29, 197, 151, 0.97); /*bleu-vert à changer*/
-		text-align: center;
-		padding: 12px 0px;
+		background-color: #154360; /*bleu-vert à changer*/
+		padding: 12px 8px;
+	}
+
+	nav > ul >li{
+		left: 0%;
 	}
 
 	nav ul{
@@ -123,13 +136,8 @@ nav input[type=checkbox]:checked ~ ul{
 		padding: 10px 0px;
 	}
 
-	/*.onglet:hover{
-		border-top: 5px solid #e44d26;
-	}*/
-
-
 	.sous-menu li{
-	border-bottom: 1px solid #154360 /*bande blanche onglets: à changer*/;
+	border-bottom: 1px solid #154360 /*bande bleu onglets*/;
 	}
 
 
@@ -137,4 +145,128 @@ nav input[type=checkbox]:checked ~ ul{
 		display: block;
 		position: static;
 	}
+}
+
+/*------------haut de page-----------*/
+header{
+	background-color: blue;
+}
+
+
+/*------------ pied de page---------*/
+
+footer{
+	background-color: #a9a9a9 ;
+	margin-top: auto;text-align: center;
+}
+
+footer > ul > li{
+	float: left;
+	position: relative;
+	left: 37%;
+	padding: 15px;
+}
+
+footer li{
+	list-style-type: none;
+}
+
+.logoSEN{
+	max-width: 100px;
+	height: auto;
+}
+
+/*-----------contenue-------------*/
+.main {
+	width: 90vw;
+	max-width: 1100px;
+	margin: 0px auto;
+}
+
+.main-box, .map-box, .video-box, .real-box {
+	width: 100%;
+	margin: 30px auto;
+	background-color: white;
+	padding: 20px 8%;
+	font-size: larger;
+	/*border: 2px solid #1b75bb;*/
+	/*box-shadow: 0px 0px 2px #114b78;*/
+	box-sizing: border-box;
+	text-align: justify;
+}
+
+.map-box, .video-box {
+	width: 90vw;
+	max-width: 870px;
+}
+
+.real-box {
+	color: black;
+	width: 80vw;
+	max-width: 470px;
+}
+
+.main-box h1 {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 24px;
+	margin: 15px 0px 15px 0px;
+}
+
+.main-box h2, .map-box h2, .video-box h2, .real-box h2 {
+	text-align: center;
+	font-size: 24px;
+	margin: 8px 0px 8px 0px;
+}
+
+.main-box p, .map-box p {
+	margin-top: 15px;
+}
+
+.main-box a, .real-box a {
+	color: #1b75bb;
+}
+
+.map-responsive {
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	position: relative;
+	height: 0;
+}
+
+.map-responsive iframe {
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	position:absolute;
+}
+
+
+.main-box p {
+	line-height: 24px;
+}
+
+
+/*---------------------Formulaire----------------------*/
+
+/*form{
+	text-align: center;
+  	width: 100%
+}*/
+
+form{
+  max-width: 450px;
+  background: #fafafa;
+  padding: 30px;
+  margin: 50px auto;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  border: 6px solid #305a72;
+}
+
+
+form input[type="submit"]:hover {
+  background: linear-gradient(to bottom, #2d77a2 5%, #337da8 100%);
+  background-color: #28739e;
 }
