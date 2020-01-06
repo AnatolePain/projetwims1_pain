@@ -11,12 +11,16 @@ body{
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
+	background-image:url(pic/wallpaper.jpg);
 }
 
 /*----------------BAR DE NAVIGATION-----------*/
 nav{
-	width: 100;
+	width: 100%;
 	background-color: #154360; /*couleur bandeau*/
+	position: fixed;
+	display: flex;
+	justify-content: center;
 }
 
 nav > ul{
@@ -34,7 +38,6 @@ nav > ul::after{
 nav > ul >li{
 	float: left;
 	position: relative;
-	left: 27%;
 }
 
 nav > ul > li > a{
@@ -112,6 +115,12 @@ nav input[type=checkbox]:checked ~ ul{
 }
 
 @media screen and (max-width: 780px){
+
+
+	nav{
+		justify-content: left;
+	}
+
 	.menu-mobile{
 		display: block;
 		color: #FFF;
@@ -181,12 +190,12 @@ footer li{
 	width: 90vw;
 	max-width: 1100px;
 	margin: 0px auto;
+	margin-top: 50px;
 }
 
 .main-box, .map-box, .video-box, .real-box {
 	width: 100%;
 	margin: 30px auto;
-	background-color: white;
 	padding: 20px 8%;
 	font-size: larger;
 	/*border: 2px solid #1b75bb;*/
@@ -250,11 +259,6 @@ footer li{
 
 /*---------------------Formulaire----------------------*/
 
-/*form{
-	text-align: center;
-  	width: 100%
-}*/
-
 form{
   max-width: 450px;
   background: #fafafa;
@@ -269,4 +273,10 @@ form{
 form input[type="submit"]:hover {
   background: linear-gradient(to bottom, #2d77a2 5%, #337da8 100%);
   background-color: #28739e;
+}
+
+textarea{
+	width: 400px;
+	height: 300px;
+	resize: none;
 }
