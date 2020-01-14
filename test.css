@@ -2,7 +2,6 @@ html{
 	height: 100%;
 }
 
-
 body{
 	font-family: 'Lucida Console', Monaco, monospace;
 	margin:0px;
@@ -22,6 +21,14 @@ nav{
 	display: flex;
 	justify-content: center;
 }
+
+.logoLD{
+	margin-left: 60px;
+	margin-top: 5px;
+	max-width: 50px;
+	height: auto;
+}
+
 
 nav > ul{
 	margin:0px;
@@ -276,7 +283,7 @@ form input[type="submit"]:hover {
 }
 
 textarea{
-	width: 400px;
+	width: 100%;
 	height: 300px;
 	resize: none;
 }
