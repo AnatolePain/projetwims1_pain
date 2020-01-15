@@ -1,0 +1,256 @@
+html{
+	height: 100%;
+}
+
+body{
+	font-family: 'Lucida Console', Monaco, monospace;
+	margin:0px;
+	padding: 0px;
+
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	background-image:url(pic/wallpaper.jpg);
+	background-attachment: fixed;
+}
+
+/*----------------BAR DE NAVIGATION-----------*/
+nav{
+	width: 100%;
+	background-color: #154360; /*couleur bandeau*/
+	position: fixed;
+	display: flex;
+	justify-content: center;
+}
+
+.logoLD{
+	max-width: 20px;
+	height: auto;
+}
+
+nav > ul{
+	margin:0px;
+	padding: 0px; /*taille du bandeau*/
+	display: block;
+}
+
+nav > ul::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+nav > ul >li{
+	float: left;
+	position: relative;
+}
+
+nav > ul > li > a{
+	padding: 20px 30px;
+	color: #FFF;
+}
+
+nav > ul > li:hover a{
+	padding: 15px 30px 25px 30px
+}
+
+nav li{
+	list-style-type: none;
+}
+
+.sous-menu{
+	display: none;
+}
+
+nav input[type=checkbox]{
+	display: none;
+}
+
+nav label{
+	display: none;
+}
+
+nav a{
+	margin: 0px; /*agrandit le tous*/
+	display: inline-block;
+	text-decoration: none;
+}
+
+nav li:hover .sous-menu{
+	display:inline-block;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	padding:0px;
+	z-index:1000; 
+}
+
+.sous-menu li{
+	border-bottom: 1px solid #CCC /*bande blanche onglets: à changer*/;
+}
+
+
+.sous-menu li a{
+	border-bottom: 15px 30px;
+	font-size: 14px;
+	color: #222538;
+	width: 200px;
+}
+
+.onglet:hover{
+	border-top: 5px solid #0070bb; 
+	background-color: RGBa(000, 112, 192, 0.15); /*couleur de fond en semi-transparance*/
+}
+
+.onglet .sous-menu{
+	background-color: RGB(000,160,240);
+}
+
+.sous-menu li:hover a{ /*surligne en gras quand on passe sous les sous onglet*/
+	color: #EEE;
+	font-weight: bold;
+}
+
+.onglet .sous-menu li:hover{
+	background-color: RGB(000, 115, 200);
+}
+
+nav input[type=checkbox]:checked ~ ul{
+	display: block;
+}
+
+@media screen and (max-width: 780px){
+
+
+	nav{
+		justify-content: left;
+	}
+
+	.linkedin{
+		left: 0%;
+	}
+
+	.menu-mobile{
+		display: block;
+		color: #FFF;
+		background-color: #154360; /*bleu-vert à changer*/
+		padding: 12px 8px;
+	}
+
+	nav > ul >li{
+		left: 0%;
+	}
+
+	nav ul{
+		display: none;
+	}
+
+	nav ul li, nav ul li a{
+		width: 100%;
+		text-align: center;
+	}
+
+	nav ul li a, nav ul li:hover a{
+		padding: 10px 0px;
+	}
+
+	.sous-menu li{
+		border-bottom: 1px solid #154360 /*bande bleu onglets*/;
+	}
+
+
+	nav li:hover .sous-menu{
+		display: block;
+		position: static;
+	}
+}
+
+/*-----------contenue-------------*/
+.main {
+	width: 90vw;
+	max-width: 1100px;
+	margin: 0px auto;
+	margin-top: 50px;
+}
+
+.main-box, .map-box, .video-box, .real-box {
+	width: 100%;
+	margin: 30px auto;
+	padding: 20px 8%;
+	font-size: larger;
+	/*border: 2px solid #1b75bb;*/
+	/*box-shadow: 0px 0px 2px #114b78;*/
+	box-sizing: border-box;
+	text-align: justify;
+}
+
+.real-box {
+	color: black;
+	width: 80vw;
+	max-width: 470px;
+}
+
+.main-box h1 {
+	padding-top: 70px;
+	padding-bottom: 0px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 24px;
+	margin: 15px 0px 15px 0px;
+}
+
+.main-box h2, .map-box h2, .video-box h2, .real-box h2 {
+	text-align: center;
+	font-size: 24px;
+	margin: 8px 0px 8px 0px;
+}
+
+.main-box p, .map-box p {
+	margin-top: 15px;
+}
+
+.main-box a, .real-box a {
+	color: #1b75bb;
+}
+
+.main-box p {
+	line-height: 24px;
+}
+
+
+/*--------------Ajout------------*/
+
+
+
+.pdf{
+	margin-right: 10%;
+	margin: auto;
+	left: 40%;
+}
+
+
+
+/*------------ pied de page---------*/
+
+footer{
+	background-color: #a9a9a9 ;
+	margin-top: auto;
+	display: flex;
+	justify-content: center;
+}
+
+footer > ul > li{
+	float: left;
+	position: relative;
+	padding: 15px;
+}
+
+footer li{
+	list-style-type: none;
+}
+
+.logoSEN{
+	max-width: 100px;
+	height: auto;
+}

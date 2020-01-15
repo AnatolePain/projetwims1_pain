@@ -10,7 +10,9 @@ body{
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
+
 	background-image:url(pic/wallpaper.jpg);
+	background-attachment: fixed;
 }
 
 /*----------------BAR DE NAVIGATION-----------*/
@@ -23,12 +25,9 @@ nav{
 }
 
 .logoLD{
-	margin-left: 60px;
-	margin-top: 5px;
-	max-width: 50px;
+	max-width: 20px;
 	height: auto;
 }
-
 
 nav > ul{
 	margin:0px;
@@ -53,7 +52,7 @@ nav > ul > li > a{
 }
 
 nav > ul > li:hover a{
-	padding: 15px 30px 20px 30px
+	padding: 15px 30px 25px 30px
 }
 
 nav li{
@@ -128,6 +127,10 @@ nav input[type=checkbox]:checked ~ ul{
 		justify-content: left;
 	}
 
+	.linkedin{
+		left: 0%;
+	}
+
 	.menu-mobile{
 		display: block;
 		color: #FFF;
@@ -153,7 +156,7 @@ nav input[type=checkbox]:checked ~ ul{
 	}
 
 	.sous-menu li{
-	border-bottom: 1px solid #154360 /*bande bleu onglets*/;
+		border-bottom: 1px solid #154360 /*bande bleu onglets*/;
 	}
 
 
@@ -161,35 +164,6 @@ nav input[type=checkbox]:checked ~ ul{
 		display: block;
 		position: static;
 	}
-}
-
-/*------------haut de page-----------*/
-header{
-	background-color: blue;
-}
-
-
-/*------------ pied de page---------*/
-
-footer{
-	background-color: #a9a9a9 ;
-	margin-top: auto;text-align: center;
-}
-
-footer > ul > li{
-	float: left;
-	position: relative;
-	left: 37%;
-	padding: 15px;
-}
-
-footer li{
-	list-style-type: none;
-}
-
-.logoSEN{
-	max-width: 100px;
-	height: auto;
 }
 
 /*-----------contenue-------------*/
@@ -202,18 +176,14 @@ footer li{
 
 .main-box, .map-box, .video-box, .real-box {
 	width: 100%;
-	margin: 30px auto;
-	padding: 20px 8%;
+	margin: 2px auto;
+	padding: 25px 8%;
 	font-size: larger;
 	/*border: 2px solid #1b75bb;*/
 	/*box-shadow: 0px 0px 2px #114b78;*/
 	box-sizing: border-box;
 	text-align: justify;
-}
-
-.map-box, .video-box {
-	width: 90vw;
-	max-width: 870px;
+	justify-content: center;
 }
 
 .real-box {
@@ -223,6 +193,8 @@ footer li{
 }
 
 .main-box h1 {
+	padding-top: 70px;
+	padding-bottom: 0px;
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 24px;
@@ -236,54 +208,48 @@ footer li{
 }
 
 .main-box p, .map-box p {
-	margin-top: 15px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 .main-box a, .real-box a {
 	color: #1b75bb;
 }
 
-.map-responsive {
-	overflow: hidden;
-	padding-bottom: 56.25%;
-	position: relative;
-	height: 0;
-}
-
-.map-responsive iframe {
-	left:0;
-	top:0;
-	height:100%;
-	width:100%;
-	position:absolute;
-}
-
-
 .main-box p {
 	line-height: 24px;
 }
 
 
-/*---------------------Formulaire----------------------*/
+/*--------------Ajout------------*/
 
-form{
-  max-width: 450px;
-  background: #fafafa;
-  padding: 30px;
-  margin: 50px auto;
-  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
-  border-radius: 10px;
-  border: 6px solid #305a72;
+.captureSnake{
+	max-width: 90%;
+	height: auto;
+	display: block;
+	margin: auto;
 }
 
+/*------------ pied de page---------*/
 
-form input[type="submit"]:hover {
-  background: linear-gradient(to bottom, #2d77a2 5%, #337da8 100%);
-  background-color: #28739e;
+footer{
+	background-color: #a9a9a9 ;
+	margin-top: auto;
+	display: flex;
+	justify-content: center;
 }
 
-textarea{
-	width: 100%;
-	height: 300px;
-	resize: none;
+footer > ul > li{
+	float: left;
+	position: relative;
+	padding: 15px;
+}
+
+footer li{
+	list-style-type: none;
+}
+
+.logoSEN{
+	max-width: 100px;
+	height: auto;
 }
